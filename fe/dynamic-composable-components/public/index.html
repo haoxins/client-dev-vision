@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>dynamic composable components</title>
+  <script src="/node_modules/systemjs/dist/system.js"></script>
+</head>
+<body>
+  <h1>bingo</h1>
+  <script>
+    SystemJS.config({
+      baseURL: '/dyc'
+    })
+
+    ;(async function() {
+      const { version } = await SystemJS.import('constant/common.js')
+      const { default: track } = await SystemJS.import('module/track.js')
+      track(version)
+    }()).catch(err => console.error(err))
+  </script>
+</body>
+</html>

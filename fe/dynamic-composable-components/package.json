@@ -1,0 +1,19 @@
+{
+  "name": "dynamic-composable-components",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "node --harmony ./build",
+    "start": "node --harmony ./server"
+  },
+  "devDependencies": {
+    "ioredis": "2",
+    "koa": "^2.0.0-alpha.7",
+    "koa-logger": "2",
+    "koa-mount": "2",
+    "koa-router": "7",
+    "koa-static": "3",
+    "systemjs": "^0.19.41",
+    "systemjs-builder": "^0.15.34"
+  }
+}
